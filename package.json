@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "npx concurrently \"npm:dev:web\" \"npm:dev:app\"",
+    "dev:web": "next dev",
+    "dev:app": "cd app && expo start",
     "build": "next build",
     "start": "next start"
   },
